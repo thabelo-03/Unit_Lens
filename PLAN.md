@@ -28,7 +28,7 @@
 | Field           | Detail                                                                 |
 |-----------------|------------------------------------------------------------------------|
 | **App Name**    | Unit Lens                                                              |
-| **Repository**  | [https://github.com/yourteam/unity-lens.git](https://github.com/yourteam/unity-lens.git) |
+| **Repository**  | [https://github.com/thabelo-03/Unit_Lens.git](https://github.com/thabelo-03/Unit_Lens.git) |
 | **Platform**    | iOS & Android (via React Native / Expo)                                |
 | **Purpose**     | Multi-sensory accessibility bridge for visually, hearing, and speech-impaired users |
 | **Architecture**| Microservices split by sensory domain                                  |

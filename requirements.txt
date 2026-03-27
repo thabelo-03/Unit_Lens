@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+websockets
+openai-whisper
+google-genai
+mediapipe

@@ -1,0 +1,21 @@
+{
+    "name": "unit-lens-backend",
+    "version": "1.0.0",
+    "description": "Node.js orchestrator for Unit Lens",
+    "main": "dist/server.js",
+    "scripts": {
+        "start": "node dist/server.js",
+        "dev": "ts-node-dev src/server.ts",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "socket.io": "^4.7.5"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.12.7",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.4.5"
+    }
+}
