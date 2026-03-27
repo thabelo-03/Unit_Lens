@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - SOCKET_PORT=3000
+      - REDIS_URL=redis://redis:6379
+      - MONGO_URI=mongodb://mongo:27017/unitlens
+      - VISUAL_SERVICE_URL=ws://visual:8001/ws/frames
+      - NAV_SERVICE_URL=ws://navigation:8002/ws/face
+      - SPEECH_SERVICE_URL=ws://speech:8003/ws/audio
+    depends_on:
+      - redis
+      - mongo
+
+  visual:
+    build: ./services/visual
+    ports:
+      - "8001:8001"
+
+  navigation:
+    build: ./services/navigation
+    ports:
+      - "8002:8002"
+
+  speech:
+    build: ./services/speech
+    ports:
+      - "8003:8003"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
