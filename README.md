@@ -65,5 +65,5 @@ Bash
 cd mobile
 npm install
 npx expo start
-🤝 The Team: [Your Team Name Here]
+🤝 The Team: VECTOR VIBE
 Developing for a more inclusive future at Midlands State University.
